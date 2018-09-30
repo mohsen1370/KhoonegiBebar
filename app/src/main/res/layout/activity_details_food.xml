@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cl_details_food"
+    android:background="#f6f6f6"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:textDirection="rtl"
+    tools:context=".Activity.DetailsFoodActivity">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbl_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#efefef"
+            android:paddingRight="-15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize">
+
+
+                <TextView
+                    android:id="@+id/txt_namefood_topdetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/irsans"
+                    android:text="قرمه سبزی"
+                    android:textColor="#4a4a4a"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/ic_back_details_food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/ic_action_back" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appbl_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:scrollbars="none">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_foodimage_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_top_details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/blure_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/blure_pink"
+                    android:orientation="horizontal"
+                    app:layout_constraintHeight_percent="0.5">
+
+                </android.support.constraint.ConstraintLayout>
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    app:layout_constraintTop_toBottomOf="@id/blure_details"
+                    android:background="#ffffff"/>
+                <com.github.siyamed.shapeimageview.RoundedImageView
+                    android:id="@+id/img_food_details"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/background_food_item"
+                    app:siBorderColor="#ffffff"
+                    app:siBorderWidth="2dp"
+                    app:siRadius="30dp"
+                    app:siSquare="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </android.support.constraint.ConstraintLayout>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_cart_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/cl_top_details">
+                <TextView
+                    android:id="@+id/txt_foodname_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="قرمه سبزی"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/irsans"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+                <TextView
+                    android:id="@+id/txt_price_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/irsans"
+                    android:text="12,500 تومان"
+                    app:layout_constraintTop_toBottomOf="@id/txt_foodname_details"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+                <Button
+                    android:id="@+id/btn_numberfood_details"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:backgroundTint="#dcdcdc"
+                    android:textSize="12sp"
+                    android:text="۰"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/irsans"
+                    app:layout_constraintTop_toBottomOf="@id/txt_price_details"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+                <Button
+                    android:id="@+id/btn_addtocart_details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="افزودن به سبد"
+                    android:fontFamily="@font/irsans"
+                    android:textSize="12sp"
+                    android:backgroundTint="#66bb6a"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/btn_numberfood_details"
+                    app:layout_constraintLeft_toRightOf="@id/btn_numberfood_details" />
+                <Button
+                    android:id="@+id/btn_reducefromcart_details"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="حذف از سبد"
+                    android:fontFamily="@font/irsans"
+                    android:textSize="12sp"
+                    android:backgroundTint="#f5363e"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/btn_numberfood_details"
+                    app:layout_constraintRight_toLeftOf="@id/btn_numberfood_details" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c4c4c4"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_cart_details"/>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_material"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_line1">
+                <TextView
+                    android:id="@+id/txt_materialtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="مواد تشکیل دهنده"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/irsans"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    app:layout_constraintRight_toRightOf="parent"/>
+                <TextView
+                    android:id="@+id/txt_materialtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="زعفران - برنج - زردچوبه - نمک - لیمو عمانی - گوشت گوساله - لوبیا قرمز - سبزی قورمه"
+                    android:fontFamily="@font/irsans"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="5dp"
+                    android:textColor="#616161"
+                    android:layout_margin="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/txt_materialtitle"/>
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c4c4c4"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_material"/>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_cook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_line2">
+                <TextView
+                    android:id="@+id/txt_cooktitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="دستور پخت"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/irsans"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    app:layout_constraintRight_toRightOf="parent"/>
+                <TextView
+                    android:id="@+id/txt_cooktext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="پیاز داغ درست میکنم بعد گوشت رو با پیازتفت میدم ولوبیا رو هم اضافه میکنم میگذارم نیمپز بشه دراین فاصله سبزی قرمه رو تفت میدم وبعد از نیم پز شدن گوشت اضافه می کنم صبر میکنم تا خورش جا بیفتد یکساعت آخر دو تا لیمو عمانی که قبلا تلخیش گرفته شده همراه با ادویه و نمک اضافه میکنم."
+                    android:fontFamily="@font/irsans"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="5dp"
+                    android:textColor="#616161"
+                    android:layout_margin="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/txt_cooktitle"/>
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_line3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c4c4c4"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_cook"/>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_chef_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_line3">
+                <TextView
+                    android:id="@+id/txt_cheftitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="نام سرآشپز"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/irsans"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    app:layout_constraintRight_toRightOf="parent"/>
+                <TextView
+                    android:id="@+id/txt_cheftext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="سرآشپز رها"
+                    android:fontFamily="@font/irsans"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="5dp"
+                    android:textColor="#616161"
+                    android:layout_margin="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/txt_cheftitle"/>
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_line4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c4c4c4"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_chef_details"/>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_group_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_line4"
+                >
+                <TextView
+                    android:id="@+id/txt_grouptitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="دسته بندی"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/irsans"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    app:layout_constraintRight_toRightOf="parent"/>
+                <TextView
+                    android:id="@+id/txt_grouptext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="خورشتی"
+                    android:fontFamily="@font/irsans"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="5dp"
+                    android:textColor="#616161"
+                    android:layout_margin="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/txt_grouptitle"/>
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_line5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#c4c4c4"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_group_details"/>
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/cl_line5">
+                <TextView
+                    android:id="@+id/txt_commenttitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="نظر و امتیاز خود را ثبت کنید"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/irsans"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    app:layout_constraintRight_toRightOf="parent"/>
+                <RatingBar
+                    android:id="@+id/ratingBar_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style= "@style/CustomRatingBar2"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="0"
+                    android:layoutDirection="ltr"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="true"
+                    android:isIndicator="false"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/txt_commenttitle"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+                <EditText
+                    android:id="@+id/et_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#ffffff"
+                    android:ellipsize="start"
+                    android:fontFamily="@font/irsans"
+                    android:gravity="center"
+                    android:hint="نظر خود را اینجا بنویسید"
+                    android:inputType="textMultiLine"
+                    android:maxLength="100"
+                    android:maxLines="3"
+                    android:textColor="#4a4a4a"
+                    android:textColorHint="@color/textColorHint"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="12dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/ratingBar_comment"/>
+                <Button
+                    android:id="@+id/btn_submitcomm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="ثبت نظر"
+                    android:fontFamily="@font/irsans"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/et_comment"/>
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/cl_title_comment"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:background="#efefef"
+                app:layout_constraintTop_toBottomOf="@id/cl_comment">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="نظرات کاربران در خصوص این غذا"
+                    android:textColor="#353535"
+                    android:fontFamily="@font/irsans"/>
+
+            </android.support.constraint.ConstraintLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rcv_comment_fooddetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/cl_title_comment">
+            </android.support.v7.widget.RecyclerView>
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">خونگی ببر</string>
+    <string-array name="text">
+        <item>slide 1</item>
+        <item>slide 2</item>
+    </string-array>
+    <string name="sign_in"><u>ثبت نام در خونگی ببر</u></string>
+    <string name="ماه">ماه</string>
+</resources>

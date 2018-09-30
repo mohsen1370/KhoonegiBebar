@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_login"
+            android:icon="@drawable/ic_person"
+            android:title="ورود و عضویت"
+            android:visible="true"
+            android:checkable="true" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person"
+            android:title=""
+            android:visible="false"
+            android:checkable="true" />
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/ic_nav_cart"
+            android:title="سبد خرید"
+            android:visible="true"
+            android:checkable="true" />
+        <item
+            android:id="@+id/nav_pay"
+            android:icon="@drawable/ic_list_pay"
+            android:title="لیست سفارشات"
+            android:visible="true"
+            android:checkable="true" />
+        <item
+            android:id="@+id/nav_web"
+            android:icon="@drawable/ic_www"
+            android:title="وب سایت"
+            android:visible="true"
+            android:checkable="true" />
+        <item
+            android:id="@+id/nav_question"
+            android:icon="@drawable/ic_help"
+            android:title="سوالات متداول"
+            android:visible="true"
+            android:checkable="true" />
+        <item
+            android:id="@+id/nav_disigner"
+            android:icon="@drawable/ic_code"
+            android:title="برنامه نویس"
+            android:visible="true"
+            android:checkable="true" />
+        <item
+            android:id="@+id/nav_us"
+            android:icon="@drawable/ic_info"
+            android:title="درباره ما"
+            android:visible="true"
+            android:checkable="true" />
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/ic_exit"
+            android:title="خروج"
+            android:visible="false"
+            android:checkable="true" />
+
+    </group>
+
+</menu>

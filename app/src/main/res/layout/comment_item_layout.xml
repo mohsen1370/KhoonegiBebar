@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#efefef">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/line_top"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#bbbbbb"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_topcomment_item"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line_top">
+        <ImageView
+            android:id="@+id/ic_account"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_account_circle"
+            android:layout_marginRight="20dp"
+            app:layout_constraintRight_toRightOf="parent"/>
+        <TextView
+            android:id="@+id/tv_name_user"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="محسن"
+            android:fontFamily="@font/irsans"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_marginRight="5dp"
+            app:layout_constraintRight_toLeftOf="@id/ic_account" />
+        <RatingBar
+            android:id="@+id/ratingBar_itemcomment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style= "@style/CustomRatingBar"
+            android:numStars="5"
+            android:stepSize="0.01"
+            android:rating="5"
+            android:layoutDirection="ltr"
+            android:layout_alignParentLeft="true"
+            android:clickable="false"
+            android:isIndicator="true"
+            android:focusableInTouchMode="false"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/cl_topcomment_item"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:id="@+id/tv_text_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="خیلی عالی بود... و به موقع رسید."
+            android:fontFamily="@font/irsans"
+            android:textColor="#6b6f72"
+            android:textSize="12sp"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

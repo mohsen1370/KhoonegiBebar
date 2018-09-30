@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl"
+    android:layout_marginLeft="5dp"
+    android:layout_marginBottom="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_food_selector"
+    android:foreground="@drawable/recyclerview_ripple"
+    android:gravity="center">
+    <com.github.siyamed.shapeimageview.CircularImageView
+        android:id="@+id/image_chef"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chef_user_error"
+        app:siBorderWidth="1dp"
+        app:siBorderColor="#cccccc"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"/>
+    <TextView
+        android:id="@+id/text_chef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="سرآشپز: هلیا"
+        android:layout_below="@id/image_chef"
+        android:layout_alignRight="@id/image_chef"
+        android:layout_alignLeft="@id/image_chef"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:fontFamily="@font/irsans"
+        android:layout_marginBottom="10dp"/>
+    <Button
+        android:id="@+id/btn_details_chef"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="جزئیات"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/irsans"
+        android:textSize="10sp"
+        android:layout_below="@id/text_chef"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/background_button_chef"
+        android:foreground="@drawable/button_ripple"
+        android:clickable="true" />
+
+
+</RelativeLayout>

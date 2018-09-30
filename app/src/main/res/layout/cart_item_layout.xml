@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_catr_itemfragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="3dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@drawable/background_food_selector"
+    android:foreground="@drawable/recyclerview_ripple"
+    android:padding="25dp">
+    <TextView
+        android:id="@+id/txt_id_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/txt_food_title_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="پیتزا پپرونی"
+        android:fontFamily="@font/irsans"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/txt_chefname_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="سرآشپز رها"
+        android:fontFamily="@font/irsans"
+        android:textColor="#6b6f72"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_food_title_cart"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="9sp"/>
+
+    <ImageView
+        android:id="@+id/img_remove_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_remove_circle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:id="@+id/txt_count_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/irsans"
+        android:text="14"
+        app:layout_constraintRight_toLeftOf="@id/img_add_cart"
+        app:layout_constraintLeft_toRightOf="@id/img_remove_cart"
+        app:layout_constraintTop_toTopOf="@id/img_remove_cart"
+        app:layout_constraintBottom_toBottomOf="@id/img_remove_cart"/>
+    <ImageView
+        android:id="@+id/img_add_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:src="@drawable/ic_add_circle"
+        app:layout_constraintLeft_toRightOf="@id/img_remove_cart"
+        app:layout_constraintTop_toTopOf="@id/img_remove_cart"
+        app:layout_constraintBottom_toBottomOf="@id/img_remove_cart"/>
+
+    <TextView
+        android:id="@+id/txt_pricefood_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/irsans"
+        android:layout_marginTop="10dp"
+        android:text="12000 تومان"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@id/txt_count_cart"
+        app:layout_constraintLeft_toRightOf="@+id/img_add_cart"
+        app:layout_constraintRight_toLeftOf="@+id/img_remove_cart" />
+
+</android.support.constraint.ConstraintLayout>

@@ -68,6 +68,8 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
     private LinearLayout newTab2;
     private TextView txttab1;
     private TextView txttab2;
+
+    private ArrayList<Integer> imgSlide;
     private ArrayList<String> urlslide;
     private ArrayList<String> nameslide;
     private LoginPreference loginPreference;
@@ -88,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
         loginPreference=new LoginPreference(this);
         context=this;
         imgSearch=(ImageView)findViewById(R.id.img_search_toolbar);
+
 
         /////////////////////////////
         setCart();//cart
@@ -273,6 +276,10 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
         urlslide.add("http://www.ghaza-khoonegi.ir/images/Capture.jpg");
         urlslide.add("http://www.ghaza-khoonegi.ir/images/Capture1.jpg");
 
+        imgSlide = new ArrayList<>();
+        imgSlide.add(R.drawable.sampel_food);
+        imgSlide.add(R.drawable.sampel_food2);
+
         nameslide = new ArrayList<>();
         nameslide.add("اسلاید1");
         nameslide.add("اسلاید2");
@@ -282,7 +289,7 @@ public class MainActivity extends AppCompatActivity implements BaseSliderView.On
             DefaultSliderView textSliderView = new DefaultSliderView(this);
             // initialize a SliderLayout
             textSliderView
-                    .image(urlslide.get(i))
+                    .image(imgSlide.get(i))
                     .setScaleType(BaseSliderView.ScaleType.Fit)
                     .setOnSliderClickListener(this);
 
